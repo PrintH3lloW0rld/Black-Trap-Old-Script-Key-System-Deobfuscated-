@@ -1,0 +1,249 @@
+---Black Trap Old Script Keysystem source code Deobfuscated by Me
+
+---YT: BaconExploiter
+
+---Discord: YeetusPropulsion👑#5308
+
+if game.CoreGui:FindFirstChild("WBlackTrap") then
+
+game.CoreGui:FindFirstChild("WBlackTrap"):Destroy()
+
+end
+
+local TweenService = game:GetService("TweenService")
+
+local UserInputService = game:GetService("UserInputService")
+
+local WBlacklib = {}
+
+function WBlacklib:Key()
+
+local WBlackTrap = Instance.new("ScreenGui")
+
+local Frame = Instance.new("Frame")
+
+local WindowFrame = Instance.new("Frame")
+
+local WindowCorner = Instance.new("UICorner")
+
+local BlackImage = Instance.new("ImageLabel")
+
+local BlackTitle = Instance.new("TextLabel")
+
+local Lines = Instance.new("Frame")
+
+local TextBox = Instance.new("TextBox")
+
+local boxCorner = Instance.new("UICorner")
+
+-- Properties --
+
+WBlackTrap.Name = "WBlackTrap"
+
+WBlackTrap.Parent = game.CoreGui
+
+WBlackTrap.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Name = "Frame"
+
+Frame.Parent = WBlackTrap
+
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+
+Frame.BackgroundTransparency = 1.000
+
+Frame.Position = UDim2.new(0, 200, 0, 30)
+
+Frame.Size = UDim2.new(0, 400, 0, 250)
+
+WindowFrame.Name = "WindowFrame"
+
+WindowFrame.Parent = Frame
+
+WindowFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+
+WindowFrame.BackgroundColor3 = Color3.fromRGB(25,25,25)
+
+WindowFrame.Position = UDim2.new(0, 295, 0, 190)
+
+WindowFrame.BorderSizePixel = 0
+
+WindowFrame.Size = UDim2.new(0, 0, 0, 0)
+
+WindowFrame.ClipsDescendants = true
+
+WindowFrame:TweenSize(UDim2.new(0, 300, 0, 150), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
+
+WindowCorner.Name = "WindowCorner"
+
+WindowCorner.Parent = WindowFrame
+
+WindowCorner.CornerRadius = UDim.new(0, 5)
+
+BlackImage.Name = "BlackImage"
+
+BlackImage.Parent = WindowFrame
+
+BlackImage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+
+BlackImage.BackgroundTransparency = 1.000
+
+BlackImage.Position = UDim2.new(0, 5, 0, 7)
+
+BlackImage.Size = UDim2.new(0, 20, 0, 20)
+
+BlackImage.Image = "rbxassetid://8666601749"
+
+BlackImage.ImageColor3 = Color3.fromRGB(0,200,0)
+
+BlackTitle.Name = "BlackTitle"
+
+BlackTitle.Parent = WindowFrame
+
+BlackTitle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+
+BlackTitle.BackgroundTransparency = 1.000
+
+Position = UDim2.new(0, 30, 0, 5)
+
+BlackTitle.Size = UDim2.new(0, 50, 0, 25)
+
+BlackTitle.Font = Enum.Font.SourceSansBold
+
+BlackTitle.Text = "|   NIGGATRAP KEYS : Key: NIGGA"
+
+BlackTitle.TextColor3 = Color3.fromRGB(0,200,0)
+
+BlackTitle.TextSize = 14.000
+
+BlackTitle.TextXAlignment = Enum.TextXAlignment.Left
+
+Lines.Name = "Lines"
+
+Lines.Parent = WindowFrame
+
+Lines.BackgroundColor3 = Color3.fromRGB(0,200,0)
+
+Lines.BorderSizePixel = 0
+
+Lines.Position = UDim2.new(0, 5, 0, 32)
+
+Lines.Size = UDim2.new(0,290,0,1)
+
+local Keyless = false
+
+local TextKeys = "NIGGA"
+
+local colorNormal = Color3.fromRGB(0,0,0)
+
+local colorWrong = Color3.fromRGB(255,0,0)
+
+local colorTrue = Color3.fromRGB(0,255,0)
+
+local textEnter = Color3.fromRGB(0,0,0)
+
+local textNormal = Color3.fromRGB(180,180,180)
+
+TextBox.Name = "TextBox"
+
+TextBox.Parent = WindowFrame
+
+TextBox.BackgroundColor3 = colorNormal
+
+TextBox.BackgroundTransparency = 0
+
+TextBox.Position = UDim2.new(0, 50, 0, 70)
+
+TextBox.Size = UDim2.new(0, 200, 0, 25)
+
+TextBox.Font = Enum.Font.Code
+
+TextBox.PlaceholderText = "Key: NIGGA"
+
+TextBox.Text = ""
+
+TextBox.TextColor3 = textNormal
+
+TextBox.PlaceholderColor3 = textNormal
+
+TextBox.TextSize = 13.000
+
+TextBox.ClearTextOnFocus = true
+
+boxCorner.Parent = TextBox
+
+boxCorner.CornerRadius = UDim.new(0,3)
+
+local function onFocused()
+
+TextBox.BackgroundColor3 = colorNormal
+
+TextBox.TextColor3 = textNormal
+
+TextBox.PlaceholderColor3 = textNormal
+
+end
+
+local function onFocusLost(enterPressed, inputObject)
+
+if enterPressed then
+
+local enterkey = TextBox.Text
+
+if enterkey == TextKeys then
+
+Keyless = true
+
+TextBox.Text = "Ur an N-word enjoyer"
+
+TextBox.BackgroundColor3 = colorTrue
+
+TextBox.TextColor3 = textEnter
+
+TextBox.PlaceholderColor3 = textEnter
+
+wait(1)
+
+game.CoreGui:FindFirstChild("WBlackTrap"):Destroy()
+
+wait(2)
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Sky2836/Skylarrr/main/MyProject.Lua.txt"))()
+
+else
+
+Keyless = false
+
+TextBox.Text = "Go Get Some Bitchs"
+
+TextBox.BackgroundColor3 = colorWrong
+
+TextBox.TextColor3 = textEnter
+
+TextBox.PlaceholderColor3 = textEnter
+
+end
+
+else
+
+TextBox.Text = ""
+
+TextBox.BackgroundColor3 = colorNormal
+
+TextBox.TextColor3 = textNormal
+
+TextBox.PlaceholderColor3 = textNormal
+
+end
+
+end
+
+TextBox.FocusLost:Connect(onFocusLost)
+
+TextBox.Focused:Connect(onFocused)
+
+end
+
+local Keys = WBlacklib:Key()
+
+return WBlacklib
